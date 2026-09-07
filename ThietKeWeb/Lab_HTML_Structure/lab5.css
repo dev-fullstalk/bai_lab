@@ -1,0 +1,53 @@
+/* Đặt lại lề mặc định và chọn font chữ dễ nhìn */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Định dạng cho Header và Footer (Màu nền tối, chữ trắng, căn giữa) */
+.site-header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Dùng Flexbox để chia cột cho phần Container */
+.container {
+    display: flex; /* Kích hoạt chế độ nằm ngang */
+    max-width: 1000px; /* Giới hạn chiều rộng trang web */
+    margin: 20px auto; /* Căn giữa toàn bộ phần thân */
+    gap: 20px; /* Tạo khoảng trống 20px giữa Aside và Article */
+}
+
+/* Định dạng cột trái (Aside) */
+aside {
+    flex: 1; /* Chiếm 1 phần không gian */
+    background-color: #e2e2e2;
+    padding: 20px;
+}
+
+aside ul {
+    list-style: none; /* Xóa dấu chấm đầu dòng */
+    padding: 0;
+}
+
+aside li {
+    margin-bottom: 10px;
+}
+
+aside a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Định dạng cột phải (Article) */
+article {
+    flex: 3; /* Chiếm 3 phần không gian (rộng gấp 3 lần Aside) */
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+}

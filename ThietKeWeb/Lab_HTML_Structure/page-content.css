@@ -1,0 +1,22 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #CCCCCC;
+}
+
+section {
+    margin-left: 20px;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+header p {
+    font-style: italic;
+}
+
+/* Ký hiệu ">" giúp chỉ định dạng cho thẻ <p> là đoạn văn nội dung nằm trực tiếp trong <article>, không ảnh hưởng tới thẻ <p> nằm trong <header> */
+article > p {
+    font-size: 24px;
+}

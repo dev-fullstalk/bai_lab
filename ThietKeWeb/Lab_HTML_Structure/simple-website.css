@@ -1,0 +1,55 @@
+/* --- CODE CỦA BÀI 1 & 2 GỘP LẠI --- */
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #CCCCCC;
+}
+
+ul {
+    background-color: #444;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+li {
+    font-size: 24px;
+    line-height: 40px;
+    height: 40px;
+    padding: 20px;
+    display: inline-block; /* Xếp hàng ngang */
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+section {
+    margin-left: 20px; /* Thụt lề cho nội dung */
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+header p {
+    font-style: italic;
+}
+
+article > p {
+    font-size: 24px;
+}
+
+/* --- CODE MỚI CHO BÀI 3 (FOOTER) --- */
+footer {
+    background-color: #444; /* Nền xám đen giống menu */
+}
+
+footer p {
+    color: #fff; /* Chữ màu trắng */
+    text-align: center; /* Căn giữa chữ */
+    margin: 0px; 
+    padding: 10px; /* Thêm padding để khung chân trang không bị ép sát vào chữ */
+}

@@ -1,0 +1,28 @@
+/* Đóng khung viền đen 1px cho bảng, hàng, và từng ô */
+table, td, tr, th {
+    border: 1px solid #000000;
+}
+
+/* Thẻ th mặc định sẽ được in đậm và căn giữa */
+th {
+    font-size: 20px;
+    padding: 5px;
+}
+
+/* Định dạng cho các ô chứa nội dung in đậm */
+.bold {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Định dạng riêng cho dòng kết quả cuối bảng */
+.result {
+    width: 400px;
+    text-align: right; /* Đẩy chữ sang lề phải */
+    padding-right: 5px; /* Khoảng cách lề phải 5px */
+}
+
+/* Định dạng khoảng cách chữ so với viền trái cho các ô dữ liệu (Table data) */
+td {
+    padding-left: 5px; 
+}
