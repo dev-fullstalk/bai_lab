@@ -17,7 +17,7 @@
 
 # PHẦN 1: THANH ĐIỀU HƯỚNG (nav-bar.html & nav-bar.css)
 
-### 1.1. Giải thích từng dòng file `nav-bar.html`
+### 1.1. Giải thích từng dòng file `nav-bar.html`  
 ```html
 1:  <!DOCTYPE html>
 2:  <html lang="en">
@@ -49,7 +49,7 @@
 - **Dòng 9 (`<nav>`):** Thẻ ngữ nghĩa (Semantic HTML) chuyên dùng để bọc thanh điều hướng (menu). *Thầy hỏi tại sao dùng `<nav>` mà không dùng `<div>`? Trả lời: Dùng `<nav>` để chuẩn SEO và hỗ trợ người khiếm thị dùng máy đọc màn hình nhận biết đây là menu chính.*
 - **Dòng 10 (`<ul>`):** Tạo một danh sách không có thứ tự (Unordered List) để chứa các nút bấm menu.
 - **Dòng 11 - 15 (`<li><a href="#">...</a></li>`):**
-  - `<li>` (List Item): Từng mục con trong danh sách menu.
+  - `<li>` (List Item): Từng mục cont trong danh sách menu.
   - `<a href="#">` (Anchor/Hyperlink): Tạo liên kết có thể click được. Dấu `#` là liên kết trống (anchor placeholder), khi click vào sẽ không chuyển trang mà giữ nguyên tại chỗ.
 - **Dòng 16 - 19:** Đóng các thẻ `</ul>`, `</nav>`, `</body>`, `</html>`.
 
@@ -85,7 +85,7 @@
 26: }
 ```
 - **Dòng 1 - 5 (`body`):**
-  - `margin: 0px; padding: 0px;`: Xóa bỏ lề mặc định của trình duyệt. *Thầy hỏi: Nếu không có dòng này thì sao? Trả lời: Menu sẽ bị một khoảng hở màu trắng khoảng 8px quanh 4 viền màn hình, không bám sát mép trên cùng.*
+  - `margin: 0px; padding: 0px;`: Xóa bỏ lề mặc định của trình duyệt. *Thầy hỏi: Nếu không có dòng này thì sao? Trả lời: Menu sẽ bị một khoảng hở màu trắng khoảng 8px quanh 4 viền màn hình, không bám sát mép trên cùng.*   
   - `background-color: #CCCCCC;`: Tô màu nền toàn trang là màu xám nhạt (mã màu HEX: `#CCCCCC`).
 - **Dòng 7 - 13 (`ul`):**
   - `margin: 0px; padding: 0px;`: Mặc định thẻ `<ul>` trong trình duyệt luôn có margin trên dưới và padding lùi đầu dòng 40px. Phải đặt về `0px` để thanh menu bám sát trên cùng và không bị lệch.
@@ -225,6 +225,16 @@ footer p {
   - `text-align: center;`: Căn giữa dòng chữ bản quyền ra giữa trang.
   - `margin: 0px;`: Xóa bỏ khoảng cách thừa mặc định của thẻ `<p>`.
   - `padding: 10px;`: **Rất quan trọng.** Tạo khoảng đệm cách đều 10px trên, dưới, trái, phải. Nếu không có `padding: 10px;`, nền xám đen sẽ bó sát chặt vào viền chữ bản quyền trông rất chật chội và xấu.
+
+#### 💡 Mẹo kinh điển: Kỹ thuật đẩy Footer xuống sát mép dưới màn hình (Sticky Footer)
+* **Vấn đề thực tế:** Khi trang web có ít bài viết, chiều cao nội dung quá ngắn nên thẻ `<footer>` sẽ bị lơ lửng ở giữa chừng màn hình, để lộ một khoảng trống lớn phía dưới nhìn rất mất thẩm mỹ.
+* **Cách giải quyết bằng Flexbox (Hiện đại & Chuẩn nhất):**
+  1. Trong `body`:
+     - `min-height: 100vh;`: Ép toàn bộ trang web luôn có chiều cao tối thiểu bằng đúng 100% chiều cao màn hình hiển thị của trình duyệt (Viewport Height).
+     - `display: flex; flex-direction: column;`: Biến `body` thành một khung chứa Flexbox xếp dọc từ trên xuống dưới gồm 3 phần: `<nav>` (đầu), `<section>` (giữa), `<footer>` (cuối).
+  2. Trong `section`:
+     - `flex: 1;`: Ra lệnh cho khối nội dung ở giữa tự động co dãn, "hút" hết toàn bộ khoảng trống thừa còn lại để đẩy `<footer>` xuống tận đáy màn hình.
+  3. **Ưu điểm vượt trội:** Khi trang ít nội dung thì footer nằm sát đáy màn hình; còn khi trang nhiều bài viết vượt quá 1 màn hình thì footer tự động lùi xuống dưới cùng sau khi cuộn chuột xong, **hoàn toàn không bao giờ bị đè chữ** (khắc phục nhược điểm của `position: fixed` hoặc `position: absolute`).
 
 ---
 

@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Roboto:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background: #e2d7aa;
+}
+
+body {
+    width: 1180px;
+    margin: 0 auto;
+    background: #e2d7aa;
+    color: #000000;
+    font: 16px Roboto, sans-serif;
+}
+
+nav {
+    margin: 30px;
+    text-align: center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+}
+
+a {
+    color: #000000;
+    font-size: 28px;
+    text-decoration: none;
+}
+
+nav li:not(:last-child) {
+    margin-right: 24px;
+}
+
+nav li:first-child a,
+nav li:last-child a {
+    color: #0a2d4a;
+    font-weight: bold;
+}
+
+h1 {
+    margin: 65px 0 0;
+    font: 60px "Indie Flower", cursive;
+    text-align: center;
+}
+
+.img-container {
+    width: 1600px;
+    height: 450px;
+    margin-top: 65px;
+    margin-left: calc((1180px - 1600px) / 2);
+    text-align: center;
+}
+
+.img-container > img {
+    width: 1100px;
+    height: 450px;
+    object-fit: cover;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    width: 1100px;
+    margin: 65px auto 0;
+}
+
+article {
+    width: 350px;
+}
+
+article h2 {
+    margin: 0;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+article h3 {
+    margin: 0 0 5px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 18px;
+}
+
+article h3 a {
+    color: #0a2d4a;
+    font-size: inherit;
+    font-weight: bold;
+}
+
+article > img {
+    display: block;
+    width: 350px;
+    height: 200px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+article p {
+    margin: 0;
+    line-height: 24px;
+    text-align: justify;
+}
+
+article > p:first-of-type::first-letter {
+    font: 80px EucrosiaUPC, sans-serif;
+}
+
+article p:last-of-type {
+    margin-top: 10px;
+    line-height: normal;
+}
+
+article p:last-of-type span a {
+    padding: 20px;
+    background: url("images/bg2.jpg");
+    color: #ffffff;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 5px;
+
+}
+
+article p:last-of-type span:first-of-type a::before {
+    content: url("images/comment.png");
+    position: relative;
+    right: 5px;
+    top: 7px;
+    padding: 10px;
+
+
+}
+
+footer {
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+}
